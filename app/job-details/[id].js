@@ -9,7 +9,13 @@ import {
 import { Stack, useRouter, useSearchParams } from "expo-router";
 import useFetch from "../../hook/useFetch";
 import { COLORS, icons, SIZES } from "../../constants";
-import { Company, JobTabs, ScreenHeaderBtn, Specifics } from "../../components";
+import {
+  Company,
+  JobFooter,
+  JobTabs,
+  ScreenHeaderBtn,
+  Specifics,
+} from "../../components";
 import { useState } from "react";
 import { JobAbout } from "../../components";
 
@@ -107,6 +113,12 @@ const JobDetails = () => {
             </View>
           )}
         </ScrollView>
+        <JobFooter
+          url={
+            data[0]?.job_google_link ??
+            "https://careers.google.com/jobs/results"
+          }
+        />
       </>
     </SafeAreaView>
   );
