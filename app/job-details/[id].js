@@ -16,7 +16,7 @@ import {
   ScreenHeaderBtn,
   Specifics,
 } from "../../components";
-import { useState } from "react";
+import { useCallback, useState } from "react";
 import { JobAbout } from "../../components";
 
 const tabs = ["About", "Qualifications", "Responsibilities"];
@@ -32,7 +32,11 @@ const JobDetails = () => {
 
   const [refreshing, setRefreshing] = useState(false);
 
-  const onRefresh = () => {};
+  const onRefresh = useCallback(() => {
+    setRefreshing(true);
+    refetch();
+    setRefreshing(false);
+  }, []);
 
   const displayTabContent = () => {
     switch (activeTab) {
