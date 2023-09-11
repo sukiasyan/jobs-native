@@ -8,6 +8,20 @@
       "expo-router"
     ],
     "name": "jobs",
-    "slug": "jobs"
+    "slug": "jobs",
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "57cf432e-7dd8-488d-b525-31e9cca0fbe4"
+      }
+    },
+    "android": {
+      "package": "com.yaks10.jobs"
+    },
+    "ios": {
+      "bundleIdentifier": "com.yaks10.jobs"
+    }
   }
 }
